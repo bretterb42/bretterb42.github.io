@@ -41,7 +41,29 @@
   </li>
 </ul>
         </div>
+<script>
+if (
+  location.hostname === "localhost" ||
+  location.hostname === "127.0.0.1" ||
+  location.protocol === "file:"
+) {
+  const devBar = document.createElement("div");
+  devBar.textContent = "DEV VERSION";
+  devBar.style.cssText = `
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: crimson;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    z-index: 9999;
+  `;
+  document.body.appendChild(devBar);
+}
+</script>
         </body>
         </html>
-</body>
-</html>
+
