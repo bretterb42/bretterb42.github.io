@@ -1,3 +1,25 @@
-#content1 {margin: auto; max-width: 900px; padding: 20px; border: groove 5px black; }
+/* Your existing container style */
+#content1 {
+  margin: auto;
+  max-width: 600px;
+  padding: 20px;
+  border: groove 5px black;
+}
 
-audio {margin-bottom: 5px;}
+/* Audio elements */
+audio {
+  display: block;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #content1 {
+    padding: 10px;      /* a little tighter on phones */
+  }
+  audio {
+    max-width: 100%;    /* let players stretch fully on small devices */
+  }
+}
